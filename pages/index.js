@@ -8,10 +8,10 @@ import { NFTCard } from "../components/nftCard"
 export default function Home() {
   const [wallet, setWalletAddress] = useState("");
   const [collection, setCollectionAddress] = useState("");
-  const [NFTs,setNFTs]= useState([]);
-  const [fetchForCollection, setFetchForCollection]=useState("false");
+  const [NFTs, setNFTs]= useState([]);
+  const [fetchForCollection, setFetchForCollection]=useState("");
   const [startToken, setStartToken] = useState('');
-  const [pageKey,setPageKey]=useState('');
+  const [pageKey, setPageKey]=useState('');
 
   const fetchNFTs = async() => {
     let nfts; 
@@ -95,7 +95,7 @@ export default function Home() {
         <div>
         <input disabled={fetchForCollection} className="mt-2 px-3 py-2 text-white bg-gradient-to-r from-violet-900 to-fuchsia-600 py-2 px-2 rounded-lg text-white focus:outline-slate-300 placeholder-slate-100 w-full  disabled:cursor-not-allowed" title="Paste Wallet Address" onChange={(e)=>{setWalletAddress(e.target.value)}} value={wallet} type={"text"} placeholder="Input a wallet address here..."></input>
 
-        <label className="mt-3 px-3 py-3 text-white rounded-lg text-white focus:outline-slate-300 hover:slate-100 block w-full rounded-full sm:text-sm focus:ring-1 justify-center"><input onChange={(e)=>{setFetchForCollection(e.target.checked); setWalletAddress("")}} type={"checkbox"} className="mr-1  accent-indigo-900"></input> ← Disable wallet address and search NFT collections only! </label>
+        <label className="mt-3 px-3 py-3 text-white rounded-lg text-white justify-center"><input onChange={(e)=>{setFetchForCollection(e.target.checked); setWalletAddress("")}} type={"checkbox"} className="mr-1  accent-indigo-900"></input> ← Disable wallet address and search NFT collections only! </label>
 
           
         <input className="mt-3 px-3 py-2 text-white bg-gradient-to-r from-violet-900 to-fuchsia-600 py-2 px-2 rounded-lg text-white focus:outline-slate-300 placeholder-slate-100 w-full" title="Paste Collection Address" onChange={(e)=>{setCollectionAddress(e.target.value)}} value={collection} type={"text"} placeholder="Input a collection address here..."></input>
