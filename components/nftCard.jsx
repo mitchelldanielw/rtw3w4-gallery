@@ -11,7 +11,7 @@ export const NFTCard = ({ nft }) => {
                 <h2 className="text-center text-lg text-slate-300">{nft.title}</h2>
                 <p className="text-slate-300">Id: {nft.id.tokenId.substr(nft.id.tokenId.length-4)}</p>
                 <p className="text-slate-300">Hover over Image for NFT description details!</p>
-                <button onClick={() =>  navigator.clipboard.writeText(`${nft.contract.address}`)} className="mt-3 text-indigo-400 text-xl" >❏ Copy Contract Address {nft.contract.address.substr(0,4)}...${nft.contract.address.substr(nft.contract.address.length-4)}</button>
+                <button onClick={() =>  navigator.clipboard.writeText(`${nft.contract.address}`)} className="mt-3 text-indigo-400 text-xl" > ❏ Copy Contract Address {nft.contract.address.substr(0,4)}...${nft.contract.address.substr(nft.contract.address.length-4)}</button>
             </div>
             <div className="flex justify-center mt-3 mb-2">
                 <a target={"_blank"} href={`https://etherscan.io/address/${nft.contract.address}`} className="py-2 px-2 mr-1 text-sm bg-indigo-600 w-1/2 text-center rounded-lg text-white cursor-pointer" title=" Collection Contract Address">Contract on Etherscan</a>

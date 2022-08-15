@@ -87,20 +87,19 @@ export default function Home() {
   
   
   return (
+
     <div className="bg-slate-900 flex flex-col items-center justify-center h-full">
       <div className="flex flex-col w-full justify-center items-center">
         <a title="Alchemy Road to Web3 Week4" className="bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 text-6xl text-center font-bold ..." target={"_blank"} href="https://docs.alchemy.com/docs/how-to-create-an-nft-gallery">RTW3 Week4 (NFT GALLERY)</a>
         <span className="py-3 bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 text-5xl font-bold ...">Utilizing Alchemy NFT API</span>
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 text-3xl font-bold ...">(Capable of fetching NFTs based on Wallet + or - Collection address)</span>
-        <div>
+      <div>
         <input disabled={fetchForCollection} className="mt-2 px-3 py-2 text-white bg-gradient-to-r from-violet-900 to-fuchsia-600 py-2 px-2 rounded-lg text-white focus:outline-slate-300 placeholder-slate-100 w-full  disabled:cursor-not-allowed" title="Paste Wallet Address" onChange={(e)=>{setWalletAddress(e.target.value)}} value={wallet} type={"text"} placeholder="Input a wallet address here..."></input>
 
         <label className="mt-3 px-3 py-3 text-white rounded-lg text-white justify-center"><input onChange={(e)=>{setFetchForCollection(e.target.checked); setWalletAddress("")}} type={"checkbox"} className="mr-1  accent-indigo-900"></input> ← Disable wallet address and search NFT collections only! </label>
-
-          
+  
         <input className="mt-3 px-3 py-2 text-white bg-gradient-to-r from-violet-900 to-fuchsia-600 py-2 px-2 rounded-lg text-white focus:outline-slate-300 placeholder-slate-100 w-full" title="Paste Collection Address" onChange={(e)=>{setCollectionAddress(e.target.value)}} value={collection} type={"text"} placeholder="Input a collection address here..."></input>
         
-        </div>
         <button className={"mt-3 text-white text-2xl justify-center bg-indigo-900 py-1 px-3 rounded-lg w-1/8 rounded-full"} title="Let's go!"> {
            () => {
             setNFTs([])
@@ -148,7 +147,8 @@ export default function Home() {
             Click to see more of this collection ↧
           </button>
           : <></> }
-      
+      </div>
+
     </div>
   )
 }
