@@ -1,3 +1,4 @@
+/* eslint-disable no-eval */
 export const NFTCard = ({ nft }) => {
         // description will appear on hover of title -(used to save nft footprint)-
     return (
@@ -14,8 +15,8 @@ export const NFTCard = ({ nft }) => {
                     <button onClick={() =>  navigator.clipboard.writeText(`${nft.contract.address}`)} className="mt-3 text-indigo-400 text-xl"> ❏ Copy Contract Address ❏ {nft.contract.address.substr(0,4)}......{nft.contract.address.substr(nft.contract.address.length-4)}</button>
                 </div>
                 <div className="flex justify-center mt-3 mb-2">
-                    <a target={"_blank"} href={`https://etherscan.io/address/${nft.contract.address}`} className="btn1" title=" Collection Contract Address">Contract on Etherscan</a>
-                    <a target={"_blank"} href={`https://etherscan.io/token/${nft.contract.address}`} className="btn1" title=" Collection Token Address">Token on etherscan</a>
+                    <a rel="noopener noreferrer" target={"_blank"} href={`https://etherscan.io/address/${nft.contract.address}`} className="btn1" title=" Collection Contract Address">Contract on Etherscan</a>
+                    <a rel="noopener noreferrer" target={"_blank"} href={`https://etherscan.io/token/${nft.contract.address}`} className="btn1" title=" Collection Token Address">Token on etherscan</a>
                 </div>
             </div>
         </div>

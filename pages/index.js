@@ -98,7 +98,7 @@ export default function Home() {
 
     <div className="flex flex-wrap items-center justify-center">
       <div className="flex flex-col w-full justify-center items-center">
-        <a title="Alchemy Road to Web3 Week4" className="title text-center font-bold ..." target={"_blank"} href="https://docs.alchemy.com/docs/how-to-create-an-nft-gallery">RTW3 Week4 (NFT GALLERY)</a>
+        <a title="Alchemy Road to Web3 Week4" className="title text-center font-bold ..." rel="noopener noreferrer" target={"_blank"} href="https://docs.alchemy.com/docs/how-to-create-an-nft-gallery">RTW3 Week4 (NFT GALLERY)</a>
         <span className="span text-center font-bold ...">Utilizing Alchemy NFT API (Capable of fetching NFTs based on Wallet + or - Collection address)</span>
         <label className="label">
           <input disabled={fetchForCollection} title="Paste Wallet Address" className="input disabled:cursor-not-allowed" onChange={(e)=>{setWalletAddress(e.target.value)}} value={wallet} type={"text"} placeholder="Input or paste a wallet address here..."></input>
