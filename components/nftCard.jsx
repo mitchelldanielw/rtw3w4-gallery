@@ -1,6 +1,6 @@
 /* eslint-disable no-eval */
 export const NFTCard = ({ nft }) => {
-        // description will appear on hover of title -(used to save nft footprint)-
+        // description will appear on hover of title (used to save nft footprint)
     return (
         
         <div className="flex flex-col w-2/12">
