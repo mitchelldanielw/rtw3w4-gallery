@@ -96,20 +96,15 @@ export default function Home() {
   
   return (
 
-  <div className="bgslate">
-    <div className="bgslate flex flex-col items-center justify-center h-full">
-      <div className="bgslate flex flex-col w-full justify-center items-center h-full">
-
+    <div className="flex flex-wrap items-center justify-center">
+      <div className="flex flex-col w-full justify-center items-center">
         <a title="Alchemy Road to Web3 Week4" className="title text-center font-bold ..." target={"_blank"} href="https://docs.alchemy.com/docs/how-to-create-an-nft-gallery">RTW3 Week4 (NFT GALLERY)</a>
-
         <span className="span text-center font-bold ...">Utilizing Alchemy NFT API (Capable of fetching NFTs based on Wallet + or - Collection address)</span>
-
         <label className="label">
           <input disabled={fetchForCollection} title="Paste Wallet Address" className="input disabled:cursor-not-allowed" onChange={(e)=>{setWalletAddress(e.target.value)}} value={wallet} type={"text"} placeholder="Input or paste a wallet address here..."></input>
           <input type={"checkbox"} className="mt-2 ml-2 accent-indigo-700" onChange={(e)=>{setFetchForCollection(e.target.checked), (e.target.checked),setNFTs("")}}></input> ← Disable wallet address and search NFT collections only!
           <input title="Paste Collection Address" className="input" onChange={(e)=>{setCollectionAddress(e.target.value)}} value={collection} type={"text"} placeholder="Input a collection address here..."></input>
         </label>
-
         <button disabled={(NFTs.length>=100)} className={"disabled:bg-slate-900 mt-6 mb-6 text-white text-2xl justify-center bg-indigo-900 py-3 px-6 rounded-full"} title="Let's go!" onClick={
            () => {
             
@@ -121,7 +116,6 @@ export default function Home() {
           }
         }> Discover NFTs! </button>
       </div>
-  
       <div className="flex flex-wrap gap-y-6 mt-1 mb-1 w-5/6 gap-x-6 justify-center bgslate">
         {
           NFTs.length && NFTs.map((nft ,index) => {
@@ -148,6 +142,5 @@ export default function Home() {
           </button>
           : <></> }
     </div>
-  </div>
   )
 }

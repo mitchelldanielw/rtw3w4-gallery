@@ -7,16 +7,11 @@ body{
   }
 
 .title{
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 text-8xl
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 text-8xl mt-32
 }
 
 .span{
-    @apply
-bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 text-3xl
-}
-
-.bgslate{
-    @apply bg-slate-900 text-slate-900
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 text-3xl
 }
 
 .label{
@@ -28,6 +23,13 @@ bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 te
 }
 
 .btn{
-    @apply bg-indigo-600 rounded-full text-center text-3xl  items-center w-2/6 py-3 mb-9 mt-1
+    @apply bg-indigo-700 rounded-full text-center text-4xl items-center w-2/6 py-3 mb-12 mt-3
 }
 
+.btn1{
+    @apply py-2 px-2 ml-1 mr-1 text-sm bg-indigo-600 w-1/2 text-center rounded-lg text-white cursor-pointer
+}
+
+.btn2{
+    @apply bg-indigo-900 rounded-full text-center items-center py-3 px-3
+}
